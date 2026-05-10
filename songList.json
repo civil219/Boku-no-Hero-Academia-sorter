@@ -1,36 +1,3 @@
-import openpyxl
-from pathlib import Path
-
-
-# Chemin vers votre fichier Excel (xlsx)
-#file_path = "C:/Users/adeli/Downloads/Party Rankings/Envoi des Sheets/One Piece.xlsx"
-
-
-def create_sorter(file_path):
-    
-    wb = openpyxl.load_workbook(file_path)
-    ws = wb.active
-    
-    num_rows = ws.max_row
-
-    ID = []
-    Anime = []
-    Info = []
-    #Type = []
-    Hyperlink = []
-    MP3 = []
-
-
-    for i in range(2,num_rows+1):
-        ID.append(ws.cell(row=i, column=1).value)
-
-    for i in range(2,num_rows+1):
-        Anime.append(ws.cell(row=i, column=2).value)
-
-    #for i in range(2,num_rows+1):
-        #Type.append("OP")
-        #Type.append(ws.cell(row=i, column=3).value.split()[0])
-
     for i in range(2,num_rows+1):
         Info.append(ws.cell(row=i, column=4).value)
         #print(Info)
@@ -39,7 +6,10 @@ def create_sorter(file_path):
         #print(Hyperlink)
         
     for i in range(2,num_rows+1):
-        MP3.append(ws.cell(row=i, column=5).hyperlink.target)
+        try:
+            MP3.append(ws.cell(row=i, column=5).hyperlink.target)
+        except Exception as e:
+            MP3.append(ws.cell(row=i, column=4).hyperlink.target)
         #print(Hyperlink)
 
         
