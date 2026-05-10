@@ -39,7 +39,10 @@ def create_sorter(file_path):
         #print(Hyperlink)
         
     for i in range(2,num_rows+1):
-        MP3.append(ws.cell(row=i, column=5).hyperlink.target)
+        try:
+            MP3.append(ws.cell(row=i, column=5).hyperlink.target)
+        except Exception as e:
+            MP3.append(ws.cell(row=i, column=4).hyperlink.target)
         #print(Hyperlink)
 
         
@@ -80,73 +83,395 @@ for xlsx in xlsx_list:
 [
     {
         "id": 1,
-        "anime": "0-saiji Start Dash Monogatari Season 2 - Ending 1",
-        "name": "\"Beyond the Trajectory\" by Chata",
-        "video": "https://eudist.animemusicquiz.com/5u2mhk.webm",
-        "mp3": null
+        "anime": "Boku no Hero Academia",
+        "name": "THE DAY by Porno Graffitti",
+        "video": "https://naedist.animemusicquiz.com/qropjh.webm",
+        "mp3": "https://naedist.animemusicquiz.com/jzrvwn.mp3"
     },
     {
         "id": 2,
-        "anime": "1-punkan dake Furete mo Ii yo... Share House no Himitsu Rule. - Ending 1",
-        "name": "\"Session Sadame Night\" by Dai Takanashi",
-        "video": "https://eudist.animemusicquiz.com/f23gq2.webm",
-        "mp3": "https://eudist.animemusicquiz.com/ne5vos.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "HEROES by Brian the Sun",
+        "video": "https://naedist.animemusicquiz.com/54efex.webm",
+        "mp3": "https://naedist.animemusicquiz.com/szti5q.mp3"
     },
     {
         "id": 3,
-        "anime": "A-Rank Party wo Ridatsu shita Ore wa, Moto Oshiego-tachi to Meikyuu Shinbu wo Mezasu. - Ending 1",
-        "name": "\"Treasure Chest\" by Yuki Tanaka",
-        "video": "https://eudist.animemusicquiz.com/agsvoz.webm",
-        "mp3": "https://eudist.animemusicquiz.com/i3vp9q.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "HERO A by Yuly",
+        "video": "https://naedist.animemusicquiz.com/dwlmkc.webm",
+        "mp3": "https://naedist.animemusicquiz.com/tqbf2bpunwmj3cyi.mp3"
     },
     {
         "id": 4,
-        "anime": "Akuyaku Reijou Tensei Ojisan - Ending 1",
-        "name": "\"Matsuken Samba II\" by Kazuhiko Inoue, M・A・O",
-        "video": "https://eudist.animemusicquiz.com/e8q47f.webm",
-        "mp3": "https://eudist.animemusicquiz.com/dje0hr.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "Peace Sign by Kenshi Yonezu",
+        "video": "https://naedist.animemusicquiz.com/s56bid.webm",
+        "mp3": "https://naedist.animemusicquiz.com/c04fsl.mp3"
     },
     {
         "id": 5,
-        "anime": "Amagami-san Chi no Enmusubi - Ending 2",
-        "name": "\"Kamisama no Iu Toori!\" by ≠ME",
-        "video": "https://eudist.animemusicquiz.com/p4etz1.webm",
-        "mp3": "https://eudist.animemusicquiz.com/wz8z3p.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "Sora ni Utaeba by amazarashi",
+        "video": "https://naedist.animemusicquiz.com/k0myox.webm",
+        "mp3": "https://naedist.animemusicquiz.com/u09jit.mp3"
     },
     {
         "id": 6,
-        "anime": "Ameku Takao no Suiri Karte - Ending 1",
-        "name": "\"will be fine\" by Gospellers feat. Anly",
-        "video": "https://eudist.animemusicquiz.com/0spf2m.webm",
-        "mp3": "https://eudist.animemusicquiz.com/iagxs7.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "Dakara, Hitori ja Nai by Little Glee Monster",
+        "video": "https://naedist.animemusicquiz.com/1b6hsn.webm",
+        "mp3": "https://naedist.animemusicquiz.com/gmk572.mp3"
     },
     {
         "id": 7,
-        "anime": "Ao no Exorcist: Yosuga-hen - Ending 1",
-        "name": "\"Overlap\" by Shiyui",
-        "video": "https://eudist.animemusicquiz.com/3z1d8i.webm",
-        "mp3": "https://eudist.animemusicquiz.com/162vdv.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "Datte Atashi no Hero. by LiSA",
+        "video": "https://naedist.animemusicquiz.com/pcvhkl.webm",
+        "mp3": "https://naedist.animemusicquiz.com/xw95dj.mp3"
     },
     {
         "id": 8,
-        "anime": "Ao no Hako - Ending 2",
-        "name": "\"Contrast\" by TOMOO",
-        "video": "https://eudist.animemusicquiz.com/qmcqk3.webm",
-        "mp3": "https://eudist.animemusicquiz.com/l2sgqo.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "Just Another Hero by Steven McNair",
+        "video": "https://naedist.animemusicquiz.com/7x2ice.webm",
+        "mp3": "https://naedist.animemusicquiz.com/9vygzv.mp3"
     },
     {
         "id": 9,
-        "anime": "Ao no Miburo - Ending 2",
-        "name": "\"Fragment\" by osage",
-        "video": "https://eudist.animemusicquiz.com/8b8iva.webm",
-        "mp3": "https://eudist.animemusicquiz.com/0yt4lm.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "ODD FUTURE by UVERworld",
+        "video": "https://naedist.animemusicquiz.com/6l3a19.webm",
+        "mp3": "https://naedist.animemusicquiz.com/0qallz.mp3"
     },
     {
         "id": 10,
-        "anime": "Arafou Otoko no Isekai Tsuuhan - Ending 1",
-        "name": "\"Aicraft\" by Kiminone",
-        "video": "https://eudist.animemusicquiz.com/ohlrpc.webm",
-        "mp3": "https://eudist.animemusicquiz.com/74jbjn.mp3"
+        "anime": "Boku no Hero Academia",
+        "name": "Make my story by Lenny code fiction",
+        "video": "https://naedist.animemusicquiz.com/8akl3n.webm",
+        "mp3": "https://naedist.animemusicquiz.com/k6v6rr.mp3"
+    },
+    {
+        "id": 11,
+        "anime": "Boku no Hero Academia",
+        "name": "Update by miwa",
+        "video": "https://naedist.animemusicquiz.com/ockp7a.webm",
+        "mp3": "https://naedist.animemusicquiz.com/kmr4lb.mp3"
+    },
+    {
+        "id": 12,
+        "anime": "Boku no Hero Academia",
+        "name": "Long Hope Philia (TV Limited) by Masaki Suda",
+        "video": "https://naedist.animemusicquiz.com/6mmelc.webm",
+        "mp3": "https://naedist.animemusicquiz.com/fragnj.mp3"
+    },
+    {
+        "id": 13,
+        "anime": "Boku no Hero Academia The Movie: Futari no Hero",
+        "name": "Long Hope Philia by Masaki Suda",
+        "video": "https://naedist.animemusicquiz.com/58nphe.webm",
+        "mp3": "https://naedist.animemusicquiz.com/36a74l.mp3"
+    },
+    {
+        "id": 14,
+        "anime": "Boku no Hero Academia The Movie: Futari no Hero",
+        "name": "Here by Yuly",
+        "video": "https://naedist.animemusicquiz.com/8uqn9z.webm",
+        "mp3": "https://naedist.animemusicquiz.com/o67j5q.mp3"
+    },
+    {
+        "id": 15,
+        "anime": "Boku no Hero Academia",
+        "name": "Polaris by BLUE ENCOUNT",
+        "video": "https://naedist.animemusicquiz.com/ie4vzd.webm",
+        "mp3": "https://naedist.animemusicquiz.com/xcp2q4.mp3"
+    },
+    {
+        "id": 16,
+        "anime": "Boku no Hero Academia",
+        "name": "Star Marker by KANA-BOON",
+        "video": "https://naedist.animemusicquiz.com/y1c2bh.webm",
+        "mp3": "https://naedist.animemusicquiz.com/tnh9j8.mp3"
+    },
+    {
+        "id": 17,
+        "anime": "Boku no Hero Academia",
+        "name": "Koukai no Uta by Sayuri",
+        "video": "https://naedist.animemusicquiz.com/nq0gyh.webm",
+        "mp3": "https://naedist.animemusicquiz.com/afra67.mp3"
+    },
+    {
+        "id": 18,
+        "anime": "Boku no Hero Academia",
+        "name": "Shout Baby by Ryokuoushoku Shakai",
+        "video": "https://naedist.animemusicquiz.com/8qcer1.webm",
+        "mp3": "https://naedist.animemusicquiz.com/b6h1fj.mp3"
+    },
+    {
+        "id": 19,
+        "anime": "Boku no Hero Academia",
+        "name": "Might by Makayla Phillips",
+        "video": "https://naedist.animemusicquiz.com/f527w3.webm",
+        "mp3": "https://naedist.animemusicquiz.com/ktgne8.mp3"
+    },
+    {
+        "id": 20,
+        "anime": "Boku no Hero Academia",
+        "name": "Hero too by Chrissy Costanza",
+        "video": "https://naedist.animemusicquiz.com/6bez9o.webm",
+        "mp3": "https://naedist.animemusicquiz.com/fe92dc.mp3"
+    },
+    {
+        "id": 21,
+        "anime": "Boku no Hero Academia",
+        "name": "Each Goal by Chrissy Costanza",
+        "video": "https://naedist.animemusicquiz.com/ifmjqu.webm",
+        "mp3": "https://naedist.animemusicquiz.com/bhvb4f.mp3"
+    },
+    {
+        "id": 22,
+        "anime": "Boku no Hero Academia The Movie: Heroes: Rising",
+        "name": "Higher Ground by sumika",
+        "video": "https://naedist.animemusicquiz.com/t5oojq.webm",
+        "mp3": "https://naedist.animemusicquiz.com/drsio5.mp3"
+    },
+    {
+        "id": 23,
+        "anime": "Boku no Hero Academia The Movie: Heroes: Rising",
+        "name": "Might⁺U by Makayla Phillips",
+        "video": "https://naedist.animemusicquiz.com/y3bmad.webm",
+        "mp3": "https://naedist.animemusicquiz.com/65d7jm.mp3"
+    },
+    {
+        "id": 24,
+        "anime": "Boku no Hero Academia",
+        "name": "No.1 by DISH//",
+        "video": "https://naedist.animemusicquiz.com/5p21u8.webm",
+        "mp3": "https://naedist.animemusicquiz.com/7zdkco.mp3"
+    },
+    {
+        "id": 25,
+        "anime": "Boku no Hero Academia",
+        "name": "Merry-Go-Round by MAN WITH A MISSION",
+        "video": "https://naedist.animemusicquiz.com/tj4tmy.webm",
+        "mp3": "https://naedist.animemusicquiz.com/or6nlt.mp3"
+    },
+    {
+        "id": 26,
+        "anime": "Boku no Hero Academia",
+        "name": "Ashiato by the peggies",
+        "video": "https://naedist.animemusicquiz.com/fic1gy.webm",
+        "mp3": "https://naedist.animemusicquiz.com/nra5hr.mp3"
+    },
+    {
+        "id": 27,
+        "anime": "Boku no Hero Academia",
+        "name": "Uso ja Nai by Soushi Sakiyama",
+        "video": "https://naedist.animemusicquiz.com/6e08ui.webm",
+        "mp3": "https://naedist.animemusicquiz.com/zaj9cw.mp3"
+    },
+    {
+        "id": 28,
+        "anime": "Boku no Hero Academia",
+        "name": "Sound of the Holidays by Jonathan Underdown",
+        "video": "https://naedist.animemusicquiz.com/gq7j4h.webm",
+        "mp3": "https://naedist.animemusicquiz.com/42clj7.mp3"
+    },
+    {
+        "id": 29,
+        "anime": "Boku no Hero Academia The Movie: World Heroes' Mission",
+        "name": "Empathy by ASIAN KUNG-FU GENERATION",
+        "video": "https://naedist.animemusicquiz.com/wa7cup.webm",
+        "mp3": "https://naedist.animemusicquiz.com/48dyfv.mp3"
+    },
+    {
+        "id": 30,
+        "anime": "Boku no Hero Academia The Movie: World Heroes' Mission",
+        "name": "Flowers by ASIAN KUNG-FU GENERATION",
+        "video": "https://naedist.animemusicquiz.com/p06pcv.webm",
+        "mp3": "https://naedist.animemusicquiz.com/123shw.mp3"
+    },
+    {
+        "id": 31,
+        "anime": "Boku no Hero Academia",
+        "name": "Hitamuki by SUPER BEAVER",
+        "video": "https://naedist.animemusicquiz.com/3vgjj3.webm",
+        "mp3": "https://naedist.animemusicquiz.com/no7nhr.mp3"
+    },
+    {
+        "id": 32,
+        "anime": "Boku no Hero Academia",
+        "name": "Bokura no by Eve",
+        "video": "https://naedist.animemusicquiz.com/v0lw02.webm",
+        "mp3": "https://naedist.animemusicquiz.com/33og0n.mp3"
+    },
+    {
+        "id": 33,
+        "anime": "Boku no Hero Academia",
+        "name": "SKETCH by Kiro Akiyama",
+        "video": "https://naedist.animemusicquiz.com/potzli.webm",
+        "mp3": "https://naedist.animemusicquiz.com/zjaiw1.mp3"
+    },
+    {
+        "id": 34,
+        "anime": "Boku no Hero Academia",
+        "name": "Kitakaze by SIX LOUNGE",
+        "video": "https://naedist.animemusicquiz.com/zzoexh.webm",
+        "mp3": "https://naedist.animemusicquiz.com/f40wug.mp3"
+    },
+    {
+        "id": 35,
+        "anime": "Boku no Hero Academia",
+        "name": "Ta ga Tame by TK from Ling Tosite Sigure",
+        "video": "https://naedist.animemusicquiz.com/51upgw.webm",
+        "mp3": "https://naedist.animemusicquiz.com/w6sma0.mp3"
+    },
+    {
+        "id": 36,
+        "anime": "Boku no Hero Academia",
+        "name": "Curtain Call by Yuuri",
+        "video": "https://naedist.animemusicquiz.com/6kf5zk.webm",
+        "mp3": "https://naedist.animemusicquiz.com/rjacsu.mp3"
+    },
+    {
+        "id": 37,
+        "anime": "Boku no Hero Academia",
+        "name": "Tsubomi by Omoinotake",
+        "video": "https://naedist.animemusicquiz.com/zmp3jx.webm",
+        "mp3": "https://naedist.animemusicquiz.com/ufdvaa.mp3"
+    },
+    {
+        "id": 38,
+        "anime": "Boku no Hero Academia",
+        "name": "Rokutousei by ZARAME",
+        "video": "https://naedist.animemusicquiz.com/ewglme.webm",
+        "mp3": "https://naedist.animemusicquiz.com/tumtet.mp3"
+    },
+    {
+        "id": 39,
+        "anime": "Boku no Hero Academia The Movie: You're Next",
+        "name": "Homunculus by Vaundy",
+        "video": "https://naedist.animemusicquiz.com/xf5at0.webm",
+        "mp3": "https://naedist.animemusicquiz.com/wc07a0.mp3"
+    },
+    {
+        "id": 40,
+        "anime": "Boku no Hero Academia The Movie: You're Next",
+        "name": "Gift by Vaundy",
+        "video": "https://naedist.animemusicquiz.com/idhkgf.webm",
+        "mp3": "https://naedist.animemusicquiz.com/t60efs.mp3"
+    },
+    {
+        "id": 41,
+        "anime": "Boku no Hero Academia",
+        "name": "THE REVO by Porno Graffitti",
+        "video": "https://naedist.animemusicquiz.com/pln6fj0nd61r2pnu.webm",
+        "mp3": "https://naedist.animemusicquiz.com/pln6fj0nd61r2pnu.webm"
+    },
+    {
+        "id": 42,
+        "anime": "Boku no Hero Academia",
+        "name": "I by BUMP OF CHICKEN",
+        "video": "https://naedist.animemusicquiz.com/4jvh3o8jm8c66pj6.webm",
+        "mp3": "https://naedist.animemusicquiz.com/4jvh3o8jm8c66pj6.webm"
+    },
+    {
+        "id": 43,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Kekka Orai by Kocchi no Kento",
+        "video": "https://naedist.animemusicquiz.com/02ruhf.webm",
+        "mp3": "https://naedist.animemusicquiz.com/lv8nlv.mp3"
+    },
+    {
+        "id": 44,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Speed by yutori",
+        "video": "https://naedist.animemusicquiz.com/8iraa2.webm",
+        "mp3": "https://naedist.animemusicquiz.com/y93i95.mp3"
+    },
+    {
+        "id": 45,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "POP☆STEP by Ikumi Hasegawa",
+        "video": "https://naedist.animemusicquiz.com/qvs5it.webm",
+        "mp3": "https://naedist.animemusicquiz.com/5ji7tt4hprb6plgp.mp3"
+    },
+    {
+        "id": 46,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Looking for you by Ikumi Hasegawa",
+        "video": "https://naedist.animemusicquiz.com/x4ft2qd6uiyv81s1.webm",
+        "mp3": "https://naedist.animemusicquiz.com/t0srud60ij7bs2i0.mp3"
+    },
+    {
+        "id": 47,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Brand New Day by Ashwin Shenoy",
+        "video": "https://naedist.animemusicquiz.com/ys08cko7zayfdgm3.webm",
+        "mp3": "https://naedist.animemusicquiz.com/2387gt2c0hjtq4d5.mp3"
+    },
+    {
+        "id": 48,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Captain Celebrity by Nicholas Aquilino(Chez)",
+        "video": "https://naedist.animemusicquiz.com/iuj1qoi08fg1xrvf.webm",
+        "mp3": "https://naedist.animemusicquiz.com/6yp6h5cq9dbjypun.mp3"
+    },
+    {
+        "id": 49,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Isseiki Chris by CC Naruhata Otokogi Ouendan",
+        "video": "https://naedist.animemusicquiz.com/h2246as1jk9rcg8r.webm",
+        "mp3": "https://naedist.animemusicquiz.com/0wjbrydt185xmid5.mp3"
+    },
+    {
+        "id": 50,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Marukane Hyakkaten no Uta by Marukane Kids",
+        "video": "https://naedist.animemusicquiz.com/d5qol751ks6kenqg.webm",
+        "mp3": "https://naedist.animemusicquiz.com/gl0et014ksgqf267.mp3"
+    },
+    {
+        "id": 51,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "My☆Hero by Ikumi Hasegawa",
+        "video": "https://naedist.animemusicquiz.com/nuuv2dk6l99qefye.webm",
+        "mp3": "https://naedist.animemusicquiz.com/dpvu292r1715z4tn.mp3"
+    },
+    {
+        "id": 52,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Marukane Hyakkaten no Uta REMIX by FeatherHATS",
+        "video": "https://naedist.animemusicquiz.com/hvqek5uyi1d5ifvp.webm",
+        "mp3": "https://naedist.animemusicquiz.com/2enyhwpe51zwss8m.mp3"
+    },
+    {
+        "id": 53,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "CATCH!!! by THREEE",
+        "video": "https://naedist.animemusicquiz.com/rk901x5xwidufp1y.webm",
+        "mp3": "https://naedist.animemusicquiz.com/rk901x5xwidufp1y.webm"
+    },
+    {
+        "id": 54,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "Miss You by shytaupe",
+        "video": "https://naedist.animemusicquiz.com/wjxpzecaneu464th.webm",
+        "mp3": "https://naedist.animemusicquiz.com/wjxpzecaneu464th.webm"
+    },
+    {
+        "id": 55,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "VIGILANTE SQUAD by Mic Bruzza",
+        "video": "https://nawdist.animemusicquiz.com/ah362u.webm",
+        "mp3": "https://nawdist.animemusicquiz.com/ah362u.webm"
+    },
+    {
+        "id": 56,
+        "anime": "Vigilante: Boku no Hero Academia Illegals",
+        "name": "I'M HERE by Paranom",
+        "video": "https://nawdist.animemusicquiz.com/36jh3z.webm",
+        "mp3": "https://nawdist.animemusicquiz.com/36jh3z.webm"
     }
 ]
 
